@@ -12,7 +12,7 @@ Follow the steps below to set up and run the project locally 👇
 ```bash
 git clone https://github.com/fazilchengapra/chat-app-f.git
 
-cd backend 
+cd frontend 
 
 npm i 
 
