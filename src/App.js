@@ -1,23 +1,19 @@
-import logo from './logo.svg';
-import './App.css';
+import "./App.css";
+import Login from "./components/Login";
+import { useState } from "react";
+import Chat from "./components/Chat";
 
 function App() {
+  const [isLogin, setIsLogin] = useState(false);
+  const [username, setUserName] = useState("");
+
   return (
     <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
+      {isLogin ? (
+        <Chat username={username} />
+      ) : (
+        <Login setIsLogin={setIsLogin} setUserName={setUserName} />
+      )}
     </div>
   );
 }
